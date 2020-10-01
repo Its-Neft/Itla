@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 6 | Agenda de contacto</title>
+    
+    <!-- Boostrap css (Inicio) -->
+    <link rel="stylesheet" href="asses/css/framework/boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="asses\css\framework\Estilo.css">
+    <!-- Boostrap css (Fin)-->
+
+</head>
+<body>
+  <div class="margen-arriba row" class="row">
+    <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="bg-dark text-light card-header">Agenda</div>
+          <div class="card-body">
+
+            <!-- Formulario (Inicio) -->
+            <form>
+              <!-- Linea (I) -->
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                </div>
+
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="txtApellido" placeholder="Apellido">
+                </div>
+              </div>
+
+              <!-- Linea (II) -->
+              <div class="form-row">
+                <div class="form-grupo col-md-6">
+                  <input type="text" class="form-control" id="txtTelefono" placeholder="Telefono">
+                </div>
+                <div class="form-group col-md-6">
+                  <select id="txtContacto" class="form-control">
+                    <option value="">Seleccionar</option>
+                    <option value="1">Laboral</option>
+                    <option value="2">Personal</option>
+                    <option value="3">Académico</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Botones (Inicio) -->
+
+              <div class="text-center">
+                <input  class="btn btn-success" type="submit" onclick="AgregarNombre()" value="Enviar">
+                <input class="btn btn-dark" type="reset" value="Limpiar">
+              </div>
+
+              <!-- Botones (Fin) -->
+
+            </form>
+            <!-- Forumulario (Fin) -->
+          </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <div class="margen-arriba">
+    <div class="form-row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+
+        <table class="table table-sm table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<!-- Boostrap js (Inicio) -->
+<script src="asses/js/libreria/boostrap/bootstrap.min.js"></script>
+<script src="asses/js/index/agenda.js"></script>
+<!-- Boostrap js (Fin) -->
+</html>
+
+
+<!-- 
+Debe realizar una aplicación web utilizando Javascript(Js), esta app debe contener un formulario para que las personas puedan colocar la información de sus contacto 
+(Nombre ,Apellido , Teléfono y si es un contacto laboral, personal o académico), los datos de Nombre , apellido y teléfonos son requeridos asi que deben ser validados usando javascript.
+
+Al dar click sobre al botón de enviar del formulario debe validarse los datos mencionados anteriormente si todo es valido, se debe agregar la información a una tabla, 
+si algún dato es invalido se debe decir cual dato es invalido en este caso que no tiene información.
+
+Los contactos agregado a las tablas deben poder editar y eliminarse.
+Para realizar esta aplicación tendrán que utilizar Html, Boostrap (Css si con bootstrap no lo es suficiente para algún ajuste) , Javascript , Dhtml(Manejo del dom)
+-->
