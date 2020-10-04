@@ -1,6 +1,3 @@
-
-//Funcion para agregar nombre
-
 function Add(){
     
     //Variables
@@ -29,176 +26,169 @@ function Add(){
             switch(txtContacto){
                 case "1":
 
-                var mainContainer = document.getElementById("idLaboral");
-                var mainDivColMd4 = document.createElement("div");
-                var classColMd4 = document.createAttribute("class");
-                classColMd4.value = "col-md-4";
-                mainDivColMd4.setAttributeNode(classColMd4);
-            
-                var DivCard = document.createElement("div");
-                DivCard.setAttribute("class","card");
-            
-                var img = document.createElement("img");
-                img.src = "asses/img/Agenda/imgLaboral.png";
-                img.setAttribute("class", "card-img-top responsive");
-            
-                var divCardBody = document.createElement("div");
-                divCardBody.setAttribute("class","card-body");
-            
-                var h6CardTittle = document.createElement("h6");
-                h6CardTittle.setAttribute("class","card-title");
-                h6CardTittle.innerText = txtNombre + " " + txtApellido + " " + txtTelefono;
+                    var mainContainer = document.getElementById("idLaboral");
+                    var mainDivColMd4 = document.createElement("div");
+                    var classColMd4 = document.createAttribute("class");
+                    classColMd4.value = "col-md-4";
+                    mainDivColMd4.setAttributeNode(classColMd4);
+                
+                    var DivCard = document.createElement("div");
+                    DivCard.setAttribute("class","card");
+                
+                    var img = document.createElement("img");
+                    img.src = "asses/img/Agenda/imgLaboral.png";
+                    img.setAttribute("class", "card-img-top responsive");
+                
+                    var divCardBody = document.createElement("div");
+                    divCardBody.setAttribute("class","card-body");
+                
+                    var h6CardTittle = document.createElement("h6");
+                    h6CardTittle.setAttribute("class","card-title");
+                    h6CardTittle.innerText = txtNombre + " " + txtApellido + " " + txtTelefono;
 
-                var divTextCenter = document.createElement("div");
-                divTextCenter.setAttribute("class","text-center");
+                    var divTextCenter = document.createElement("div");
+                    divTextCenter.setAttribute("class","text-center");
 
-                var btnEliminar = document.createElement("button");
-                var btnEditar = document.createElement("button");
-                btnEliminar.setAttribute("class","btn btn-danger");
-                btnEliminar.innerText = "Eliminar";
+                    var btnEliminar = document.createElement("button");
+                    var btnEditar = document.createElement("button");
+                    btnEliminar.setAttribute("class","btn btn-danger");
+                    btnEliminar.innerText = "Eliminar";
 
-                //Eliminar
-                btnEliminar.addEventListener("click",function(){
-                    mainContainer.removeChild(mainDivColMd4);
+                    //Eliminar
+                    btnEliminar.addEventListener("click",function(){
+                        mainContainer.removeChild(mainDivColMd4);
+                    });
 
-                });
+                    btnEditar.setAttribute("class","btn btn-warning");
+                    btnEditar.innerText = "Editar";
 
+                    //Editar
+                    btnEditar.addEventListener("click",function(){
+                        h6CardTittle.innerText = inputNombre.value + " " + inputApellido.value + " " + inputTelefono.value;
+                        h6CardTittle.appendChild(divTextCenter);
+                    });
+                
+                    divTextCenter.appendChild(btnEliminar);
+                    divTextCenter.appendChild(btnEditar);
 
-                btnEditar.setAttribute("class","btn btn-warning");
-                btnEditar.innerText = "Editar";
-
-                //Editar
-
-                btnEditar.addEventListener("click",function(){
-  
-                });
-            
-                divTextCenter.appendChild(btnEliminar);
-                divTextCenter.appendChild(btnEditar);
-
-                divCardBody.appendChild(h6CardTittle);
-                h6CardTittle.appendChild(divTextCenter);
-                DivCard.appendChild(img);
-                DivCard.appendChild(divCardBody);
-            
-                mainDivColMd4.appendChild(DivCard);
-                mainContainer.appendChild(mainDivColMd4);
+                    divCardBody.appendChild(h6CardTittle);
+                    h6CardTittle.appendChild(divTextCenter);
+                    DivCard.appendChild(img);
+                    DivCard.appendChild(divCardBody);
+                
+                    mainDivColMd4.appendChild(DivCard);
+                    mainContainer.appendChild(mainDivColMd4);
                     break;
 
                 case "2":
-
-                var mainContainer = document.getElementById("idPersonal");
-                var mainDivColMd4 = document.createElement("div");
-                var classColMd4 = document.createAttribute("class");
-                classColMd4.value = "col-md-4";
-                mainDivColMd4.setAttributeNode(classColMd4);
-            
-                var DivCard = document.createElement("div");
-                DivCard.setAttribute("class","card");
-            
-                var img = document.createElement("img");
-                img.src = "asses/img/Agenda/imgPersonal.png";
-                img.setAttribute("class", "card-img-top responsive");
-            
-                var divCardBody = document.createElement("div");
-                divCardBody.setAttribute("class","card-body");
-            
-                var h6CardTittle = document.createElement("h6");
-                h6CardTittle.setAttribute("class","card-title");
-                h6CardTittle.innerText = txtNombre + " " + txtApellido + " " + txtTelefono;
-
-                var divTextCenter = document.createElement("div");
-                divTextCenter.setAttribute("class","text-center");
-
-                var btnEliminar = document.createElement("button");
-                var btnEditar = document.createElement("button");
-                btnEliminar.setAttribute("class","btn btn-danger");
-                btnEliminar.innerText = "Eliminar";
-
-                //Eliminar
-                btnEliminar.addEventListener("click",function(){
-                    mainContainer.removeChild(mainDivColMd4);
-
-                });
-
-
-                btnEditar.setAttribute("class","btn btn-warning");
-                btnEditar.innerText = "Editar";
-
-                //Editar
-
-                btnEditar.addEventListener("click",function(){
-
-                });
-            
-                divTextCenter.appendChild(btnEliminar);
-                divTextCenter.appendChild(btnEditar);
-
-                divCardBody.appendChild(h6CardTittle);
-                h6CardTittle.appendChild(divTextCenter);
-                DivCard.appendChild(img);
-                DivCard.appendChild(divCardBody);
-            
-                mainDivColMd4.appendChild(DivCard);
-                mainContainer.appendChild(mainDivColMd4);
+                    var mainContainer = document.getElementById("idPersonal");
+                    var mainDivColMd4 = document.createElement("div");
+                    var classColMd4 = document.createAttribute("class");
+                    classColMd4.value = "col-md-4";
+                    mainDivColMd4.setAttributeNode(classColMd4);
+                
+                    var DivCard = document.createElement("div");
+                    DivCard.setAttribute("class","card");
+                
+                    var img = document.createElement("img");
+                    img.src = "asses/img/Agenda/imgPersonal.png";
+                    img.setAttribute("class", "card-img-top responsive");
+                
+                    var divCardBody = document.createElement("div");
+                    divCardBody.setAttribute("class","card-body");
+                
+                    var h6CardTittle = document.createElement("h6");
+                    h6CardTittle.setAttribute("class","card-title");
+                    h6CardTittle.innerText = txtNombre + " " + txtApellido + " " + txtTelefono;
+    
+                    var divTextCenter = document.createElement("div");
+                    divTextCenter.setAttribute("class","text-center");
+    
+                    var btnEliminar = document.createElement("button");
+                    var btnEditar = document.createElement("button");
+                    btnEliminar.setAttribute("class","btn btn-danger");
+                    btnEliminar.innerText = "Eliminar";
+    
+                    //Eliminar
+                    btnEliminar.addEventListener("click",function(){
+                        mainContainer.removeChild(mainDivColMd4);
+                    });
+    
+                    btnEditar.setAttribute("class","btn btn-warning");
+                    btnEditar.innerText = "Editar";
+    
+                    //Editar
+                    btnEditar.addEventListener("click",function(){
+                        
+                        h6CardTittle.innerText = inputNombre.value + " " + inputApellido.value + " " + inputTelefono.value;
+                        h6CardTittle.appendChild(divTextCenter);
+                    });
+                
+                    divTextCenter.appendChild(btnEliminar);
+                    divTextCenter.appendChild(btnEditar);
+    
+                    divCardBody.appendChild(h6CardTittle);
+                    h6CardTittle.appendChild(divTextCenter);
+                    DivCard.appendChild(img);
+                    DivCard.appendChild(divCardBody);
+                
+                    mainDivColMd4.appendChild(DivCard);
+                    mainContainer.appendChild(mainDivColMd4);
                     break;
 
                 case "3":
-
-                var mainContainer = document.getElementById("idAcademico");
-                var mainDivColMd4 = document.createElement("div");
-                var classColMd4 = document.createAttribute("class");
-                classColMd4.value = "col-md-4";
-                mainDivColMd4.setAttributeNode(classColMd4);
-            
-                var DivCard = document.createElement("div");
-                DivCard.setAttribute("class","card");
-            
-                var img = document.createElement("img");
-                img.src = "asses/img/Agenda/imgAcademico.png";
-                img.setAttribute("class", "card-img-top responsive");
-            
-                var divCardBody = document.createElement("div");
-                divCardBody.setAttribute("class","card-body");
-            
-                var h6CardTittle = document.createElement("h6");
-                h6CardTittle.setAttribute("class","card-title");
-                h6CardTittle.innerText = txtNombre + " " + txtApellido + " " + txtTelefono;
-
-                var divTextCenter = document.createElement("div");
-                divTextCenter.setAttribute("class","text-center");
-
-                var btnEliminar = document.createElement("button");
-                var btnEditar = document.createElement("button");
-                btnEliminar.setAttribute("class","btn btn-danger");
-                btnEliminar.innerText = "Eliminar";
-
-                //Eliminar
-                btnEliminar.addEventListener("click",function(){
-                    mainContainer.removeChild(mainDivColMd4);
-
-                });
-
-
-                btnEditar.setAttribute("class","btn btn-warning");
-                btnEditar.innerText = "Editar";
-
-                //Editar
-
-                btnEditar.addEventListener("click",function(){
-
-                });
-            
-                divTextCenter.appendChild(btnEliminar);
-                divTextCenter.appendChild(btnEditar);
-
-                divCardBody.appendChild(h6CardTittle);
-                h6CardTittle.appendChild(divTextCenter);
-                DivCard.appendChild(img);
-                DivCard.appendChild(divCardBody);
-            
-                mainDivColMd4.appendChild(DivCard);
-                mainContainer.appendChild(mainDivColMd4);
+                    var mainContainer = document.getElementById("idAcademico");
+                    var mainDivColMd4 = document.createElement("div");
+                    var classColMd4 = document.createAttribute("class");
+                    classColMd4.value = "col-md-4";
+                    mainDivColMd4.setAttributeNode(classColMd4);
+                
+                    var DivCard = document.createElement("div");
+                    DivCard.setAttribute("class","card");
+                
+                    var img = document.createElement("img");
+                    img.src = "asses/img/Agenda/imgAcademico.png";
+                    img.setAttribute("class", "card-img-top responsive");
+                
+                    var divCardBody = document.createElement("div");
+                    divCardBody.setAttribute("class","card-body");
+                
+                    var h6CardTittle = document.createElement("h6");
+                    h6CardTittle.setAttribute("class","card-title");
+                    h6CardTittle.innerText = txtNombre + " " + txtApellido + " " + txtTelefono;
+    
+                    var divTextCenter = document.createElement("div");
+                    divTextCenter.setAttribute("class","text-center");
+    
+                    var btnEliminar = document.createElement("button");
+                    var btnEditar = document.createElement("button");
+                    btnEliminar.setAttribute("class","btn btn-danger");
+                    btnEliminar.innerText = "Eliminar";
+    
+                    //Eliminar
+                    btnEliminar.addEventListener("click",function(){
+                        mainContainer.removeChild(mainDivColMd4);
+                    });
+    
+                    btnEditar.setAttribute("class","btn btn-warning");
+                    btnEditar.innerText = "Editar";
+    
+                    //Editar
+                    btnEditar.addEventListener("click",function(){
+                        h6CardTittle.innerText = inputNombre.value + " " + inputApellido.value + " " + inputTelefono.value;
+                        h6CardTittle.appendChild(divTextCenter);
+                    });
+                
+                    divTextCenter.appendChild(btnEliminar);
+                    divTextCenter.appendChild(btnEditar);
+    
+                    divCardBody.appendChild(h6CardTittle);
+                    h6CardTittle.appendChild(divTextCenter);
+                    DivCard.appendChild(img);
+                    DivCard.appendChild(divCardBody);
+                
+                    mainDivColMd4.appendChild(DivCard);
+                    mainContainer.appendChild(mainDivColMd4);
                     break;
                      
             }
