@@ -12,7 +12,7 @@
 
 </head>
 <body>
-  <div class="font-weight-bold text-center margen-arriba row" class="row" >
+  <div class="font-weight-bold text-center top-arriba row" class="row" >
     <div class="col-md-3"></div>
       <div class="col-md-6">
         <div class="card ">
@@ -20,26 +20,26 @@
           <div class="card-body">
 
             <!-- Formulario (Inicio) -->
-            <form>
+            <form class="was-validated">
               <!-- Linea (I) -->
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                  <input type="text" class="form-control is-invalid" id="txtNombre" placeholder="Nombre" required >
                 </div>
 
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="txtApellido" placeholder="Apellido">
+                  <input type="text" class="form-control is-invalid" id="txtApellido" placeholder="Apellido" required>
                 </div>
               </div>
 
               <!-- Linea (II) -->
               <div class="form-row">
                 <div class="form-grupo col-md-6">
-                  <input type="text" class="form-control" id="txtTelefono" placeholder="Telefono">
+                  <input type="text" class="form-control" id="txtTelefono" placeholder="Telefono" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <select id="txtContacto" class="form-control">
+                  <select id="txtContacto" class="form-control" required>
                     <option value="">Seleccionar</option>
                     <option value="1">Laboral</option>
                     <option value="2">Personal</option>
@@ -48,75 +48,80 @@
                 </div>
               </div>
 
+              <!-- TEST AREA -->
+              <!-- FIN TEST AREA -->
+
               <!-- Botones (Inicio) -->
-
-              <div class="text-center">
-                <input class="btn btn-success " type="submit" onclick="AgregarNombre()" value="Agregar">
-                <!-- <input class="btn btn-danger" type="reset" value="Limpiar"> -->
-              </div>
-
+              <input class="btn btn-success " type="button" onclick="Add()" value="Agregar">
+              <input class="btn btn-warning " type="reset" value="Limpiar">
               <!-- Botones (Fin) -->
 
             </form>
             <!-- Forumulario (Fin) -->
+
           </div>
         </div>
-
-        <!-- ### (Inicio)  -->
-
-        <div class="font-weight-bold text-center margen-arriba card-deck">
-          <div class="card">
-            <div class="bg-primary  text-light card-header">Laboral</div>
-            <div class="card-body">
-
-              <div>
-                <img  class="img"  class="img-fluid" class="card-img-top" src="asses\img\Agenda\imgLaboral.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Datos</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-          <div class="card">
-            <div class="bg-primary  text-light card-header">Personal</div>
-            <div class="card-body">
-              
-              <div>
-                <img  class="img"  class="img-fluid" class="card-img-top" src="asses\img\Agenda\imgPersonal.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Datos</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="card">
-            <div class="bg-primary  text-light card-header">Académico</div>
-            <div class="card-body">
-
-              <div>
-                <img  class="img"  class="img-fluid" class="card-img-top" src="asses\img\Agenda\imgAcademico.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Datos</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <!-- ### (Fin) -->
     </div>
   </div>
 
+<div class="text-center row top-arriba">
+  <div class="col-md-4">
+    
+    <div class="card">
+      <div class="bg-primary  text-light card-header">Laboral
+      </div>
+        <div class="card-body">
+          
+          <div class="row" id="idLaboral">
 
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+  <div class="col-md-4">
+
+    <div class="card">
+      <div class="bg-dark  text-light card-header">Laboral
+      </div>
+        <div class="card-body">
+          
+          <div class="row" id="idPersonal">
+                
+
+
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+  <div class="col-md-4">
+
+    <div class="card">
+      <div class="bg-secondary  text-light card-header">Laboral
+      </div>
+        <div class="card-body">
+          
+          <div class="row" id="idAcademico">
+                
+
+
+          </div>
+
+        </div>
+      </div>
+
+  </div>
+</div>
 
 </body>
 <!-- Boostrap js (Inicio) -->
+<script src="asses/js/libreria/jQuery/jquery-3.5.1.min.js"></script> 
 <script src="asses/js/libreria/boostrap/bootstrap.min.js"></script>
 <script src="asses/js/index/agenda.js"></script>
+
 <!-- Boostrap js (Fin) -->
 </html>
 
